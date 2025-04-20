@@ -4,10 +4,6 @@ import os
 import platform
 from openpyxl import load_workbook  
 
-# Fungsi untuk membersihkan layar
-def clear_screen():
-    os.system('cls' if platform.system() == 'Windows' else 'clear')
-
 # Load file Excel
 file_path = "Struktur_Data_Dataset_Kelas_A_B_C.xlsx"
 wb = load_workbook(file_path)
@@ -18,6 +14,11 @@ data = []
 for row in sheet.iter_rows(min_row=2, values_only=True):  # skip header
     if row[5] and row[6] and row[7]:  # pastikan minimal kolom penting tidak kosong
         data.append({
+            "No": str(int(row[0])),
+            "NIM": str(int(row[1])),
+            "Nama Mahasiswa": str(row[2]),
+            "Sumber Database":str(row[3]),
+            "Fokus Kata Kunci":str(row[4]),
             "Judul Paper": str(row[5]),
             "Tahun Terbit": int(row[6]) if isinstance(row[6], float) else row[6],
             "Nama Penulis": str(row[7]),
@@ -25,6 +26,10 @@ for row in sheet.iter_rows(min_row=2, values_only=True):  # skip header
             "Kesimpulan": str(row[9]) if len(row) > 9 and row[9] else "Tidak tersedia",
             "Link Paper": str(row[10]) if len(row) > 10 and row[10] else "Tidak tersedia"
         })
+
+# Fungsi untuk membersihkan layar
+def clear_screen():
+    os.system('cls' if platform.system() == 'Windows' else 'clear')
 
 # Fungsi Linear Search
 def linear_search(data, key, attribute):
@@ -104,9 +109,14 @@ def main():
         if results:
             print("\nHasil Pencarian:")
             for result in results:
-                print(f"Judul     : {result['Judul Paper']}")
-                print(f"Tahun     : {result['Tahun Terbit']}")
-                print(f"Penulis   : {result['Nama Penulis']}")
+                print(f"No                  : {result['No']}")
+                print(f"NIM                 : {result['NIM']}")
+                print(f"Nama Mahasiswa      : {result['Nama Mahasiswa']}")
+                print(f"Sumber Database     : {result['Sumber Database']}")
+                print(f"Fokus Kata Kunci    : {result['Fokus Kata Kunci']}")
+                print(f"Judul Paper         : {result['Judul Paper']}")
+                print(f"Tahun Terbit        : {result['Tahun Terbit']}")
+                print(f"Nama Penulis        : {result['Nama Penulis']}")
                 print("\nAbstrak:")
                 print(result["Abstrak"])
                 print("\nKesimpulan:")
