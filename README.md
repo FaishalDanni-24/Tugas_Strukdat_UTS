@@ -6,10 +6,10 @@ Repositori ini berisi kode program python untuk mencari paper akademik menggunak
 
 ## Penjelasan Singkat
 
-Struktur Data : Data dibaca dan disimpan program sebagai list dengan isi kumpulan dict per paper akademik.
-Linear Search : Data diicari satu persatu dari awal sampai akhir dataset.
-Binary Search : Data diurutkan terlebih dahulu, lalu dilakukan pencarian.
-Output        : Program akan menampilkan seluruh nilai terkait data yang ditemukan secara lengkap termasuk abstrak dan kesimpulan paper.
+- **Struktur Data**      : Data dibaca dan disimpan program sebagai list dengan isi kumpulan dict per paper akademik.
+- **Linear Search**      : Data diicari satu persatu dari awal sampai akhir dataset.
+- **Binary Search**      : Data diurutkan terlebih dahulu, lalu dilakukan pencarian.
+- **Hasil Pencarian**    : Program akan menampilkan seluruh nilai terkait data yang ditemukan secara lengkap termasuk abstrak dan kesimpulan paper.
 
 ---
 
@@ -21,7 +21,7 @@ Output        : Program akan menampilkan seluruh nilai terkait data yang ditemuk
    - Dataset dapat diunduh dari Google Spreadsheet :
      https://docs.google.com/spreadsheets/d/17ru4XAU2NloE9Dfxr2PC1BVcsYkLLT5r7nPSsiOFlvQ/edit?gid=743838712#gid=743838712
 5. **Jalankan Program di Terminal**
-6. **Ikuti Menu Interaktif** untuk memilih jenis algoritma pencarian dan atribut kata kunci yang dipakai untuk mencari
+6. **Ikuti Menu Interaktif** untuk memilih jenis algoritma pencarian dan atribut kata kunci yang dipakai untuk mencari paper
 
 ---
 
